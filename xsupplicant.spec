@@ -25,6 +25,7 @@ BuildRequires:	openssl-devel
 BuildRequires:	pcsc-lite-devel
 BuildRequires:	qt3-devel
 BuildRequires:  libiw-devel
+BuildConflicts: docbook-dtd44-xml
 
 %description
 An open source implementation of IEEE 802.1X.
