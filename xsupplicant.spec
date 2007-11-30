@@ -10,6 +10,7 @@ Release:	%{release}
 Epoch:		0
 Url:		http://open1x.sourceforge.net/
 Source0:	http://download.sourceforge.net/open1x/xsupplicant-%{version}.tar.bz2
+Patch0:		xsupplicant-1.2.8-wireless_inc.patch
 License:	GPL
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -61,6 +62,7 @@ supplicant, an authenticator and an authentication server.
 
 %prep
 %setup -q
+%patch0 -p1 -b .wireless_inc
 
 %build
 autoreconf -i
