@@ -75,7 +75,6 @@ export CPPFLAGS="-I%{_includedir}/PCSC"
 %configure # --enable-eap-sim
 # (cjw) parallel make doesn't always work
 make
-%{__perl} -pi -e 's#JADE_PUB=.*#JADE_PUB=%{_datadir}/sgml#' doc/builddocs.sh
 cd doc; ./builddocs.sh
 %if %{build_qt_gremlin}
 cd ../gui_tools/gui/qt/qt_gremlin; qmake qt_gremlin_xsupplicant.pro; %make
