@@ -86,13 +86,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std
 mkdir -p %{buildroot}/etc/
-mkdir -p %{buildroot}/usr/share/doc/%{name}-%{version}
+mkdir -p %{buildroot}/usr/share/doc/%{name}
 install -m 644 etc/xsupplicant.conf %{buildroot}/etc/xsupplicant.conf
 %if %{build_qt_gremlin}
 install -m 755 gui_tools/gui/qt/qt_gremlin/qt_gremlin_xsupplicant %{buildroot}/%{_sbindir}/qt_gremlin_xsupplicant
-install -m 644 gui_tools/gui/qt/qt_gremlin/README %{buildroot}/usr/share/doc/%{name}-%{version}/README.qt_gremlin
+install -m 644 gui_tools/gui/qt/qt_gremlin/README %{buildroot}/usr/share/doc/%{name}/README.qt_gremlin
 %endif
-install -m 644 etc/*-example.conf %{buildroot}/usr/share/doc/%{name}-%{version}/
+install -m 644 etc/*-example.conf %{buildroot}/usr/share/doc/%{name}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
