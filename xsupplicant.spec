@@ -24,8 +24,6 @@ BuildRequires:	openssl-devel
 BuildRequires:	pcsc-lite-devel
 BuildRequires:	qt3-devel
 BuildRequires:  libiw-devel
-BuildRequires:  autoconf2.5
-BuildRequires:	automake1.9
 
 %description
 An open source implementation of IEEE 802.1X.
@@ -65,10 +63,7 @@ supplicant, an authenticator and an authentication server.
 %setup -q
 
 %build
-aclocal-1.9
-automake-1.9
-autoheader-2.5x || :
-autoconf-2.5x
+autoreconf -i
 touch config.h
 # pcsc-lite-devel 1.2.9+ has winscard.h in %{_includedir}/PCSC instead
 # of just %{_includedir}. And this header file is needed for eap-sim
