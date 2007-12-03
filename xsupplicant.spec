@@ -1,6 +1,6 @@
 %define name xsupplicant
 %define version 1.2.8
-%define release %mkrel 1
+%define release %mkrel 2
 %define build_qt_gremlin 0
 
 Summary:	An open source implementation of IEEE 802.1X
