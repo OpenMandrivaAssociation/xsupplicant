@@ -13,6 +13,7 @@ Source0:	http://download.sourceforge.net/open1x/xsupplicant-%{version}.tar.bz2
 Patch0:		xsupplicant-1.2.8-wireless_inc.patch
 License:	GPL
 Group:		Networking/Other
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:	pcsc-lite
 BuildRequires:	byacc
 BuildRequires:	docbook-utils-pdf
