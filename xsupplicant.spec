@@ -1,9 +1,9 @@
 %define name xsupplicant
 %define version 1.2.8
-%define release %mkrel 2
+%define release %mkrel 3
 %define build_qt_gremlin 0
 
-Summary:	An open source implementation of IEEE 802.1X
+Summary:	Implementation of IEEE 802.1X
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
@@ -51,7 +51,7 @@ supplicant, an authenticator and an authentication server.
 
 %package doc
 Group:		Networking/Other
-Summary:	Open source Implementation of the IEEE 802.1x protocol
+Summary:	Implementation of the IEEE 802.1x protocol
 
 %description doc
 An open source implementation of IEEE 802.1X.
