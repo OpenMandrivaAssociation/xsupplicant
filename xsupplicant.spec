@@ -1,6 +1,6 @@
 %define name xsupplicant
 %define version 1.2.8
-%define release %mkrel 6
+%define release %mkrel 7
 %define build_qt_gremlin 0
 
 Summary:	Implementation of IEEE 802.1X
