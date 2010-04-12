@@ -1,6 +1,6 @@
 %define name xsupplicant
 %define version 2.2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Implementation of IEEE 802.1X
 Name:		%{name}
