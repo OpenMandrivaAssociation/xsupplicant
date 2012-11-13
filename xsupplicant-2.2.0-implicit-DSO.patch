@@ -1,0 +1,13 @@
+diff -up XSupplicant-2.2.0-src/xsupplicant/configure.ac.DSO XSupplicant-2.2.0-src/xsupplicant/configure.ac
+--- XSupplicant-2.2.0-src/xsupplicant/configure.ac.DSO	2009-06-18 13:20:09.000000000 -0400
++++ XSupplicant-2.2.0-src/xsupplicant/configure.ac	2010-02-10 16:05:30.374641077 -0500
+@@ -361,6 +361,9 @@ case "$host_os" in
+       AC_CHECK_HEADER(sys/socket.h, [], [AC_MSG_ERROR([header file \
+         <sys/socket.h> is required for Xsupplicant.])])
+ 
++      AC_CHECK_LIB(dl, dladdr)
++      AC_CHECK_LIB(z, deflate)
++
+       AS_IF([test "$enable_static_iwlib" != yes], 
+       		  [AC_CHECK_HEADER([iwlib.h], 
+ 		  	[MORELIBS="${MORELIBS} -liw"], [AC_MSG_ERROR([header file <iwlib.h> is required for XSupplicant.])])],

@@ -1,0 +1,35 @@
+diff -up xsupplicant-src-2.1.9.709/xsupplicant-ui/xsupptray/XSupplicantUI-unix.pro.BAD xsupplicant-src-2.1.9.709/xsupplicant-ui/xsupptray/XSupplicantUI-unix.pro
+--- xsupplicant-src-2.1.9.709/xsupplicant-ui/xsupptray/XSupplicantUI-unix.pro.BAD	2010-01-13 11:50:15.939273096 -0500
++++ xsupplicant-src-2.1.9.709/xsupplicant-ui/xsupptray/XSupplicantUI-unix.pro	2010-01-13 11:50:53.312370639 -0500
+@@ -5,9 +5,9 @@
+ 
+ TEMPLATE = app
+ TARGET = XSupplicantUI
+-DESTDIR = ../build-debug
++DESTDIR = ../build-release
+ QT += xml
+-CONFIG += debug
++CONFIG += release
+ INCLUDEPATH += ./../../xsupplicant/src/eap_types/tnc \
+     ./../../xsupplicant/lib \
+     ./../../xsupplicant/lib/libsupdetect \
+@@ -18,7 +18,7 @@ INCLUDEPATH += ./../../xsupplicant/src/e
+     /usr/include/libxml2 \
+     /usr/local/include \
+     . \
+-    ./debug \
++    ./release \
+     ./GeneratedFiles
+ LIBS += -L"./../../xsupplicant/lib/libsupdetect" \
+     -L"./../../xsupplicant/lib/libxsupconfig" \
+@@ -36,8 +36,8 @@ LIBS += -L"./../../xsupplicant/lib/libsu
+     -lxsupconfcheck \
+     -lsupdetect 
+ DEPENDPATH += .
+-MOC_DIR += debug
+-OBJECTS_DIR += debug
++MOC_DIR += release
++OBJECTS_DIR += release
+ UI_DIR += ./GeneratedFiles
+ RCC_DIR += ./release
+ 

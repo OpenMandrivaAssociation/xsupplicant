@@ -1,0 +1,12 @@
+diff -up XSupplicant-2.1.8-src/xsupplicant-ui/xsupptray/FormLoader.cpp.Fedora XSupplicant-2.1.8-src/xsupplicant-ui/xsupptray/FormLoader.cpp
+--- XSupplicant-2.1.8-src/xsupplicant-ui/xsupptray/FormLoader.cpp.Fedora	2009-04-22 01:13:04.000000000 -0400
++++ XSupplicant-2.1.8-src/xsupplicant-ui/xsupptray/FormLoader.cpp	2009-09-02 12:40:38.329916230 -0400
+@@ -82,7 +82,7 @@ QString FormLoader::skinpath()
+ #ifdef __APPLE__
+         return QString("/Library/Application Support/XSupplicant") + QString("/Skins/Default/");
+ #else
+-	return QApplication::applicationDirPath() + QString("/Skins/Default/");
++	return QString("/usr/share/xsupplicant/Skins/Default/");
+ #endif // __APPLE__
+ }
+ 

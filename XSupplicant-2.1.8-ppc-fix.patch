@@ -1,0 +1,25 @@
+diff -up XSupplicant-2.1.8-src/xsupplicant/lib/libcrashdump/sigsegv.c.ppc XSupplicant-2.1.8-src/xsupplicant/lib/libcrashdump/sigsegv.c
+--- XSupplicant-2.1.8-src/xsupplicant/lib/libcrashdump/sigsegv.c.ppc	2009-05-26 19:16:26.000000000 -0400
++++ XSupplicant-2.1.8-src/xsupplicant/lib/libcrashdump/sigsegv.c	2009-09-02 17:57:26.857041963 -0400
+@@ -81,7 +81,21 @@ static void signal_segv(int signum, sigi
+     // NGREG not defined on Mac OS X...
+ #ifndef __APPLE__
+     for(i = 0; i < NGREG; i++)
++#if defined(__linux__)
++        #if defined(__powerpc__)
++        #if defined(__powerpc64__)
++        fprintf(fh, "reg[%02d]       = 0x" REGFORMAT "\n", i, ucontext->uc_mcontext.gp_regs[i]);
++        #else
++        fprintf(fh, "reg[%02d]       = 0x" REGFORMAT "\n", i, ucontext->uc_mcontext.uc_regs->gregs[i]);
++        #endif
++        #else
++        /* This is a bit of a lie, ia64 is also special, but I don't care. */
+         fprintf(fh, "reg[%02d]       = 0x" REGFORMAT "\n", i, ucontext->uc_mcontext.gregs[i]);
++        #endif
++#else
++	/* This is probably not right for any OS besides Solaris x86. */
++	fprintf(fh, "reg[%02d]       = 0x" REGFORMAT "\n", i, ucontext->uc_mcontext.gregs[i]);
++#endif
+ #else
+     fprintf(fh, "NGREG Not available on Mac OS X.\n");
+ #endif
