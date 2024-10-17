@@ -7,7 +7,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Epoch:		0
-Url:		http://open1x.sourceforge.net/
+Url:		https://open1x.sourceforge.net/
 Source0:	http://download.sourceforge.net/open1x/XSupplicant-%{version}-src.tar.gz
 Source1:	XSupplicantUI.desktop
 Patch0:		xsupplicant-2.2.0-fix-link.patch
