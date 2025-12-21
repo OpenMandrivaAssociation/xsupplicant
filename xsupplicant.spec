@@ -19,6 +19,11 @@ License:	GPLv2+ or BSD with advertising
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:	pcsc-lite
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	openssl-devel
 BuildRequires:	pcsc-lite-devel
 BuildRequires:  libiw-devel
